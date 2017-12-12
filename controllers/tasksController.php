@@ -58,8 +58,9 @@ class tasksController extends http\controller
     public static function store()
     {
         $record = todos::findOne($_REQUEST['id']);
+		$record->title = $_REQUEST['title'];
         $record->body = $_REQUEST['body'];
-		$record->isdone = ($_REQUEST['isdone']?$_REQUEST['isdone']:'2');
+		$record->isdone = ($_REQUEST['isdone']?$_REQUEST['isdone']:'no');
 		$record->ownerid = $_SESSION['userID'];
 		$record->createddate = date('Y-m-d');
 		$record->updateddate = date('Y-m-d');
@@ -70,8 +71,9 @@ class tasksController extends http\controller
     public static function save() {
 		$date = date('Y-m-d');
         $task = new todo();
+		$task->title = $_REQUEST['title'];
         $task->body = $_POST['body'];
-		$task->isdone = ($_REQUEST['isdone']?$_REQUEST['isdone']:'2');
+		$task->isdone = ($_REQUEST['isdone']?$_REQUEST['isdone']:'no');
         $task->ownerid = $_SESSION['userID'];
 		$task->createddate = $date;
         $task->save();
