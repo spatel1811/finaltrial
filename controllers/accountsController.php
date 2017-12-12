@@ -29,7 +29,7 @@ class accountsController extends http\controller
 			header("Location: index.php?page=homepage&action=show");
 		}
 		
-        $records = accounts::findAll();
+        $records = array(accounts::findOne($userID)); //accounts::findAll();
         self::getTemplate('all_accounts', $records);
 
     }
