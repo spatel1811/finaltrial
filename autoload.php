@@ -1,7 +1,6 @@
 <?php
 class Manage
 {
-	//by IPE TEAM
 	 public static function config()
     {
 		$data['site_name'] = 'Todo Task Management';
