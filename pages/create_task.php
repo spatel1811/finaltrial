@@ -32,6 +32,8 @@ $user_data = accounts::findUserbyId($userID);
 <h1>Hi <?=$user_data->fname?></h1>
 								
 <ul>
+<li><a href="index.php?page=accounts&action=all">My Account</a>
+</li>
 <li><a href="index.php?page=tasks&action=all">All Todos</a>
 </li>
 <li>
@@ -40,6 +42,7 @@ $user_data = accounts::findUserbyId($userID);
 </ul>
 
 <form action="index.php?page=tasks&action=save" method="post">
+	Title: <input type="text" name="title" id="title" required><br>
 	Body: <textarea name="body" id="body" required></textarea><br>
 	Is Done: <input type="checkbox" name="isdone" id="isdone" value="1"><br>
     <input type="submit" value="Submit form">
