@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body style="background-color:DodgerBlue;">
 
 
 <h1>
@@ -27,6 +27,7 @@ echo $config['site_name'];
 <h2>Login</h2>
 
 <form action="index.php?page=accounts&action=login" method="POST">
+<marquee><h1>LOGIN PAGE OF SJP77 WELCOMES YOU</h1></marquee>
     <div class="container">
         <label><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="email" required>

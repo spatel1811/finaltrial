@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body style="background-color:DodgerBlue;">
 
 
 <h1>

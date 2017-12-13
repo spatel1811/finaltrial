@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body style="background-color:DodgerBlue;">
 
 <h1>
 <?php
@@ -26,10 +26,11 @@ echo $config['site_name'];
 <h2>Register</h2>
 
 <form action="index.php?page=accounts&action=register" method="post">
-    First name: <input type="text" name="fname" required><br>
-    Last name: <input type="text" name="lname" required><br>
-    Email: <input type="email" name="email" required><br>
-    Phone: <input type="tel" name="phone" required><br>
+<marquee><h1> SJP77 TODO TASK REGISTRATION WELCOME YOU</h1></marquee>
+    First name: <input type="text" name="fname" placeholder="first name"required><br>
+    Last name: <input type="text" name="lname"placeholder="lastname" required><br>
+    Email or username: <input type="email" name="email" placeholder="username"required><br>
+    Phone: <input type="tel" name="phone"placeholder="phone no" required><br>
     Birthday: <input type="text" name="birthday" placeholder="yyyy-mm-dd" required><br>
     Gender: <input type="radio" name="gender" value="male" checked="checked">Male <input type="radio" name="gender" value="female"> Female<br>
     Password: <input type="password" name="password" required><br>
