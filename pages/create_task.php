@@ -18,11 +18,11 @@
 <body style="background-color:DodgerBlue;">
 <h1>
 <?php
-//this how to print some data;
+
 $config = Manage::config();
 echo $config['site_name'];
 ?></h1>
-<h1>Add Todos</h1>
+<h1>YOU CAN ADD TODO TASK HERE</h1>
 
 <?php
 $userID = $_SESSION["userID"];
@@ -31,15 +31,7 @@ $user_data = accounts::findUserbyId($userID);
 
 <h1>Hi <?=$user_data->fname?></h1>
 								
-<ul>
-<li><a href="index.php?page=accounts&action=all">My Account</a>
-</li>
-<li><a href="index.php?page=tasks&action=all">All Todos</a>
-</li>
-<li>
-<a href="index.php?page=accounts&action=logout">Logout</a>
-</li>
-</ul>
+
 
 <form action="index.php?page=tasks&action=save" method="post">
 	Title: <input type="text" name="title" id="title" required><br>
@@ -48,6 +40,15 @@ $user_data = accounts::findUserbyId($userID);
     <input type="submit" value="Submit form">
 </form>
 <a href="index.php?page=tasks&action=all">Back</a>
+<ul>
+<li><a href="index.php?page=accounts&action=all">CLICK TO DISPLAY ACCOUNT</a>
+</li>
+<li><a href="index.php?page=tasks&action=all">CLICK TO SHOW ALL TODOS</a>
+</li>
+<li>
+<a href="index.php?page=accounts&action=logout">Logout</a>
+</li>
+</ul>
 <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -20,7 +20,7 @@
 
 <h1>
 <?php
-//this how to print some data;
+
 $config = Manage::config();
 echo $config['site_name'];
 ?></h1>
@@ -29,7 +29,7 @@ echo $config['site_name'];
 <form action="index.php?page=accounts&action=login" method="POST">
 <marquee><h1>LOGIN PAGE OF SJP77 WELCOMES YOU</h1></marquee>
     <div class="container">
-        <label><b>Username</b></label>
+        <label><b>Email</b></label>
         <input type="text" placeholder="Enter Username" name="email" required>
 
         <label><b>Password</b></label>

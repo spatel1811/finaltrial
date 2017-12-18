@@ -18,12 +18,12 @@
 <body style="background-color:DodgerBlue;">
 <h1>
 <?php
-//this how to print some data;
+
 $config = Manage::config();
 echo $config['site_name'];
 ?></h1>
 
-<h2>Show Account</h2>
+<h2>ACCOUNTS</h2>
 
 <h3>Email: <?php echo $data->email; ?></h3>
 <h3>First Name: <?php echo $data->fname; ?></h3>

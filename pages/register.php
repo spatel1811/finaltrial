@@ -19,11 +19,11 @@
 
 <h1>
 <?php
-//this how to print some data;
+
 $config = Manage::config();
 echo $config['site_name'];
 ?></h1>
-<h2>Register</h2>
+<h2><marquee>Register here</marquee></h2>
 
 <form action="index.php?page=accounts&action=register" method="post">
 <marquee><h1> SJP77 TODO TASK REGISTRATION WELCOME YOU</h1></marquee>

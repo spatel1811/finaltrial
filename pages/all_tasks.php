@@ -18,11 +18,11 @@
 <body style="background-color:DodgerBlue;">
 <h1>
 <?php
-//this how to print some data;
+
 $config = Manage::config();
 echo $config['site_name'];
 ?></h1>
-<h2>All Todos</h2>
+<h2><marquee>TODO DISPLAY</marquee></h2>
 
 <?php
 $userID = $_SESSION["userID"];
@@ -30,24 +30,25 @@ $user_data = accounts::findUserbyId($userID); ?>
 
 <h3>Hi <?=$user_data->fname?></h3>
 
-<ul>
-<li><a href="index.php?page=accounts&action=all">My Account</a>
-</li>
-<li><a href="index.php?page=tasks&action=create">Add Todos</a>
-</li>
-<li>
-<a href="index.php?page=accounts&action=logout">Logout</a>
-</li>
-</ul>
+
 
 <?php
-//this is how you print something
+
 if(!empty($data)) {
 	print utility\htmlTable::genarateTableFromMultiArray($data);
 } else {
 	echo 'Data not found';
 }
 ?>
+<ul>
+<li><a href="index.php?page=accounts&action=all">CLICK TO GO TO ACCOUNTS</a>
+</li>
+<li><a href="index.php?page=tasks&action=create">CLICK TO ADD TODOS</a>
+</li>
+<li>
+<a href="index.php?page=accounts&action=logout">LOGOUT</a>
+</li>
+</ul>
 
 <script src="js/scripts.js"></script>
 </body>

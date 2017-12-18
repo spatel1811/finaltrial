@@ -18,7 +18,7 @@
 <body style="background-color:DodgerBlue;">
 <h1>
 <?php
-//this how to print some data;
+
 $config = Manage::config();
 echo $config['site_name'];
 ?></h1>
@@ -30,7 +30,7 @@ $userID = $_SESSION["userID"];
 $user_data = accounts::findUserbyId($userID);
 ?>
 
-<h1>Hi <?=$user_data->fname?></h1>
+<h1>Hola<?=$user_data->fname?></h1>
 								
 <ul>
 <li><a href="index.php?page=accounts&action=all">My Account</a>

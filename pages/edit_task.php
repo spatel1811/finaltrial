@@ -20,11 +20,11 @@
 
 <h1>
 <?php
-//this how to print some data;
+
 $config = Manage::config();
 echo $config['site_name'];
 ?></h1>
-<h1>Edit Todos</h1>
+<h1><marquee>Edit Todos</marquee></h1>
 <?php
 $userID = $_SESSION["userID"];
 $user_data = accounts::findUserbyId($userID);
@@ -32,15 +32,7 @@ $user_data = accounts::findUserbyId($userID);
 
 <h2>Hi <?=$user_data->fname?></h2>
 								
-<ul>
-<li><a href="index.php?page=accounts&action=all">My Account</a>
-</li>
-<li><a href="index.php?page=tasks&action=all">All Todos</a>
-</li>
-<li>
-<a href="index.php?page=accounts&action=logout">Logout</a>
-</li>
-</ul>
+
 
 <form action="index.php?page=tasks&action=store&id=<?php echo $data->id; ?>" method="post">
 	Title: <input type="text" name="title" id="title" value="<?php echo $data->title; ?>" required><br>
@@ -50,6 +42,15 @@ $user_data = accounts::findUserbyId($userID);
     <input type="submit" value="Submit form">
 </form>
 <a href="index.php?page=tasks&action=all">Back</a>
+<ul>
+<li><a href="index.php?page=accounts&action=all">CLICK TO SHOW ACCOUNT</a>
+</li>
+<li><a href="index.php?page=tasks&action=all">CLICK TO SHOW TODOS</a>
+</li>
+<li>
+<a href="index.php?page=accounts&action=logout">Logout</a>
+</li>
+</ul>
 <script src="js/scripts.js"></script>
 </body>
 </html>
